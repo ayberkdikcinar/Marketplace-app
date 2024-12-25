@@ -5,18 +5,28 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
+  --background-color: #eeeeee;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: #121212;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Ensure all elements adhere to the box-sizing model */
+}
+
 #root {
-  max-width: 1280px;
+  width: 100%;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
+  min-height: 100vh;
 }
 
 a {
@@ -30,9 +40,9 @@ a:hover {
 
 body {
   margin: 0;
+  padding: 0;
   display: flex;
   place-items: center;
-  min-width: 320px;
   min-height: 100vh;
 }
 
