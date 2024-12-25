@@ -1,6 +1,6 @@
 import { FreelancerList, Search, transformUser } from '../features/dashboard';
 import useFetchUsers from '../features/dashboard/hooks/query/useFetchUsers';
-import { Box } from '@mui/material';
+import { Box, Grid2 as Grid } from '@mui/material';
 import withLoading from '../components/withLoading';
 
 const FreelancerListWithLoading = withLoading(FreelancerList);
@@ -19,11 +19,14 @@ export default function Dashboard() {
       }}
     >
       <Search />
-      <FreelancerListWithLoading
-        error={error}
-        isLoading={isPending}
-        users={data?.map((user) => transformUser(user)) || []}
-      />
+      <Grid container spacing={2}>
+        <FreelancerListWithLoading
+          error={error}
+          gridSize={4}
+          isLoading={isPending}
+          users={data?.map((user) => transformUser(user)) || []}
+        />
+      </Grid>
     </Box>
   );
 }

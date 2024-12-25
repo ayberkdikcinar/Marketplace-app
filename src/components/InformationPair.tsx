@@ -7,7 +7,7 @@ type InformationPairProps = {
 
 export default function InformationPair({ label, value }: InformationPairProps) {
   return (
-    <Box display='flex' justifyContent='space-between' alignItems='center' sx={{ mb: 1 }}>
+    <Box display='flex' justifyContent='space-between' alignItems='center' sx={{ mb: 0.5 }}>
       <Typography variant='body2' color='text.secondary' mr={1}>
         {label}:
       </Typography>

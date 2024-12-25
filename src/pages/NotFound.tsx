@@ -7,7 +7,7 @@ export default function NotFound() {
       <Typography variant='h1' color='error' gutterBottom>
         404
       </Typography>
-      <Typography variant='h6' color='textSecondary' paragraph>
+      <Typography variant='h6' color='textSecondary' component={'p'}>
         Page Not Found
       </Typography>
       <Button variant='contained' color='primary' component={NoDecorationLink} to='/'>
