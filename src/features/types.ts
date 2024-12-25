@@ -61,4 +61,21 @@ interface CommentQueryParams {
   postId?: string;
 }
 
-export type { User, Job, Comment, UserResponse, PostResponse, UserQueryParams, PostQueryParams, CommentQueryParams };
+interface PostFilters {
+  criteria?: 'name' | 'city';
+  maxJob?: number;
+  minJob?: number;
+  term?: string;
+}
+
+export type {
+  User,
+  Job,
+  Comment,
+  UserResponse,
+  PostResponse,
+  UserQueryParams,
+  PostQueryParams,
+  CommentQueryParams,
+  PostFilters,
+};
