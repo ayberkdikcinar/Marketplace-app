@@ -27,7 +27,7 @@ export default function Search() {
   };
 
   return (
-    <form onSubmit={handleFormSubmit}>
+    <form onSubmit={handleFormSubmit} role='form'>
       <Box
         sx={{
           display: 'flex',
@@ -42,6 +42,7 @@ export default function Search() {
         <SearchIcon sx={{ color: 'action.active', mr: 1, my: 0.5 }} />
 
         <TextField
+          data-testid='search-input'
           value={localTerm || ''}
           type='text'
           slotProps={{ input: { disableUnderline: true } }}
@@ -61,7 +62,8 @@ export default function Search() {
           }}
         />
         <TextField
-          id='outlined-select-currency'
+          data-testid='criteria-input'
+          id='outlined-select-criteria'
           select
           value={localCriteria || 'name'}
           variant='standard'

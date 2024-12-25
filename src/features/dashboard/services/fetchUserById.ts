@@ -1,6 +1,6 @@
 import { ENPOINTS } from '../../../endpoints';
-import type { UserResponse } from '../../types';
-import type { UserQueryParams } from '../types';
+import type { UserResponse, UserQueryParams } from '../../types';
+
 export async function fetchUserById(id: string, queryParams?: UserQueryParams): Promise<UserResponse> {
   const queryString = queryParams ? '?' + new URLSearchParams(queryParams as Record<string, string>).toString() : '';
   const response = await fetch(`${ENPOINTS.USERS}/${id}${queryString}`);
